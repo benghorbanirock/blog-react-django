@@ -1,0 +1,127 @@
+.reserveCard {
+    display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+    .reserveCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: .5rem;
+        padding: 1rem;
+        border: 1.5px solid var(--stroke);
+        border-radius: 1.5rem;
+        margin-right: 1.25rem;
+        margin-bottom: 1.25rem;
+        position: sticky;
+        top: 6rem;
+        height: fit-content;
+    }
+    .reserveCard .titleReserveCard {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 0 1.2rem 0;
+        border-bottom: 1.5px solid var(--stroke);
+    }
+    .reserveCard .titleReserveCard .off {
+        padding: .25rem 1.5rem;
+        background-color: var(--red);
+        border-radius: 2rem;
+        display: grid;
+        place-content: center;
+    }
+    .titleReserveCard .price {
+        font-size: 1.25rem;
+    }
+    .reserveCard .selectDate {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: .25rem;
+    }
+    .reserveCard .selectDate .customeInput {
+        background-color: var(--secondary-pill);
+        color: var(--text);
+        border-radius: 2rem;
+        padding: .25rem;
+        position: relative;
+    }
+    .reserveCard .selectDate input {
+        opacity: 0;
+    }
+    .selectDate .customeInput img {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        transform: translateY(-50%);
+        width: 24px;
+        filter: invert(1);
+    }
+    html[dark] .selectDate .customeInput img {
+        filter: invert(0);
+    }
+    .reserveCard .selectDate input::-webkit-calendar-picker-indicator {
+        width: 100%;
+        cursor: pointer;
+    }
+    .reserveCard .selectNumber {
+        background-color: var(--secondary-pill);
+        padding: .5rem .75rem;
+        border-radius: 2rem;
+    }
+    .reserveCard .selectMenu {
+        background-color: var(--secondary-pill);
+        border-radius: .5rem;
+    }
+    .reserveCard .selectMenu .options {
+        padding-right: .75rem;
+    }
+    .reserveCard .fileInput {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-size: .9rem;
+    }
+    .reserveCard .fileInput .redStar {
+        color: red;
+        font-size: .55rem;
+        margin-left: .25rem;
+    }
+    .reserveCard .options li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: .25rem;
+    }
+    .reserveCard .options label {
+        display: flex;
+        column-gap: .25rem;
+        cursor: pointer;
+    }
+    .reserveCard .options label input {
+        margin-top: .2rem;
+    }
+    .reserveCard .cost {
+        background-color: var(--secondary-pill);
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+    }
+    .reserveCard .cost li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .25rem 0;
+    }
+    .reserveCard .totalPrice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .reserveCard .reserveButton {
+        background-color: var(--primary);
+        color: white;
+        padding: .5rem 0;
+        border-radius: 2rem;
+    }
+}

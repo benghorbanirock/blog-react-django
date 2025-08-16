@@ -1,0 +1,189 @@
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--background);
+    font: .9rem 'iransans';
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.formContainer .loginAndSignupImg {
+    width: 100%;
+    height: 190px;
+    border-radius: 1.5rem;
+    image-rendering: pixelated;
+    background: url('./../assets/images/loginAndSingup.png') 0 0 / 100% 100% no-repeat border-box;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem 0;
+}
+
+.formContainer form h2 {
+    font-weight: 300;
+    font-size: 1.25rem;
+}
+
+.formContainer form h2 ~ span {
+    font-size: 1.25rem;
+    display: none;
+}
+
+.formContainer form input {
+    padding: .5rem 1rem .5rem 2.5rem;
+    width: 100%;
+    border-radius: 2rem;
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--stroke);
+    font-size: .9rem;
+}
+
+.passContainer {
+    position: relative;
+}
+
+.eyeIcon {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.forget {
+    color: var(--primary);
+}
+
+.forget span {
+    display: none;
+}
+
+.formContainer .sendButton {
+    background-color: var(--secondary-button);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+}
+
+.withAccount {
+    color: var(--stroke);
+    text-align: center;
+    position: relative;
+}
+
+.withAccount::before {
+    content: '';
+    width: 100%;
+    height: .5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: var(--stroke);
+    z-index: 1;
+}
+
+.withAccount span {
+    padding: 1rem;
+    background-color: var(--background);
+    position: relative;
+    z-index: 2;
+}
+
+.googleButton {
+    background-color: var(--background);
+    color: var(--text);
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid var(--stroke);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .5rem;
+    font-size: .9rem;
+    font-weight: 900;
+}
+
+.googleButton img {
+    width: .95rem;
+}
+
+.question {
+    text-align: center;
+    font-weight: 500;
+}
+
+.question a {
+    margin-right: .3rem;
+    color: var(--primary);
+    font-size: .9rem;
+}
+
+@media only screen and (min-width: 500px) {
+    .formContainer .loginAndSignupImg {
+        height: 300px;
+    }
+    .forget {
+        display: flex;
+        column-gap: .3rem;
+    }
+    .forget span {
+        color: var(--primary);
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .formContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+    .formContainer .loginAndSignupImg {
+        height: 100%;
+        order: 1;
+    }
+    .formContainer .formWrapper {
+        width: 85%;
+        height: 100%;
+        margin: auto;
+    }
+    .formContainer .formWrapper form {
+        height: 100%;
+        justify-content: space-between;
+    }
+    .formContainer form h2 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .formContainer form h2 ~ span {
+        display: block;
+    }
+    .forget {
+        color: var(--text);
+    }
+    .forget span {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .formContainer {
+        font-size: 1rem;
+        padding: 2rem;
+    }
+    .formContainer input {
+        font-size: 1rem !important;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .formContainer form {
+        padding: 2rem 4rem;
+    }
+}

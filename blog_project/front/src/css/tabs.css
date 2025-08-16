@@ -1,0 +1,41 @@
+.tabsContainer ul.tabsTitle {
+    display: flex;
+    column-gap: 2rem;
+    border-bottom: 1px solid var(--stroke);
+}
+
+.tabsContainer ul.tabsTitle li {
+    cursor: pointer;
+    padding: .25rem;
+}
+
+.tabsContainer ul.tabsTitle li.active {
+    border-bottom: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.tabsContainer ul.tabsTitle li:nth-of-type(4),
+.tabsContainer ul.tabsTitle li:nth-of-type(5) {
+    display: none;
+}
+
+.tabsContainer .tabsContent {
+    padding: 1rem 0;
+    font-weight: 300;
+    font-family: 'iransans';
+}
+
+.tabsContainer .tabsContent li {
+    display: none;
+}
+
+.tabsContainer .tabsContent li.active {
+    display: block;
+}
+
+@media only screen and (min-width: 550px) {
+    .tabsContainer ul.tabsTitle li:nth-of-type(4),
+    .tabsContainer ul.tabsTitle li:nth-of-type(5) {
+        display: block;
+    }
+}

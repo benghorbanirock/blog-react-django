@@ -1,0 +1,89 @@
+.commentsContainer {
+    padding: .5rem 0;
+    color: var(--text);
+    display: grid;
+}
+
+.commentsContainer h4 {
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    font: 600 1.25rem 'dana';
+    padding-bottom: .75rem;
+}
+
+.commentsContainer h4 span {
+    border-bottom: 2px solid var(--primary);
+}
+
+img.commentsIcon {
+    filter: brightness(0);
+    width: 1.25rem;
+}
+
+html[dark] img.commentsIcon {
+    filter: brightness(1);
+}
+
+.cardComment {
+    margin-bottom: 1rem;
+    font: .9rem 'iransans';
+    padding: 1rem;
+    border: 1px solid var(--stroke);
+    border-radius: 2rem;
+}
+
+.cardComment .imageUser {
+    border-radius: 50%;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+.headerComment {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.headerComment h5 {
+    color: var(--comment-name);
+    font-size: 1rem;
+}
+
+.headerComment span {
+    opacity: .75;
+}
+
+.messageComment {
+    padding: .75rem 0;
+}
+
+.footerComment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 300;
+    opacity: .65;
+}
+
+.likeIcon {
+    filter: brightness(0);
+    cursor: pointer;
+}
+
+html[dark] .likeIcon {
+    filter: brightness(1);
+}
+
+.likeIcon:nth-of-type(2) {
+    transform: scaleX(-1);
+    margin-right: 1.5rem;
+}
+
+.seeAll {
+    width: 100%;
+    padding: .5rem 0;
+    border-radius: 2rem;
+    background-color: var(--primary);
+    color: white;
+}

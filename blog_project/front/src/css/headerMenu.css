@@ -1,0 +1,244 @@
+#menuContainer {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 4.5rem;
+    background-color: var(--background);    
+    font: 500 1rem 'iransans';
+    overflow-y: scroll;
+    transition: transform .3s linear;
+    color: var(--text);
+}
+
+#menuContainer.active {
+    transform: translateX(0);
+}
+
+#menuContainer .menuList {
+    display: flex;
+    flex-direction: column;
+    padding: .5rem 1.1rem;
+}
+
+#menuContainer .menuList li {
+    width: 100%;
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#menuContainer .menuList li a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text);
+}
+.menuItemsTitle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dynamicArrow {
+    transition: transform .15s ease-in;
+}
+
+.dynamicArrow.active {
+    transform: rotate(-90deg);
+}
+
+.menuList .subMenu {
+    padding: .5rem .25rem 0 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease-in;
+}
+
+.menuList .subMenu.active {
+    max-height: 300px;
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--yellow);
+}
+
+html[dark] #toggleTheme {
+    color: white;
+}
+
+.menuList .itemsIcon {
+    background-color: var(--menu-icon-background);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-content: center;
+}
+
+.menuList .searchInput {
+    margin: .5rem 0;
+    flex-wrap: nowrap !important;
+}
+
+.menuList .searchInput input {
+    color: white;
+    background-color: var(--menu-icon-background);
+    width: 100%;
+    padding: .5rem 1rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    font-size: 1rem;
+}
+
+.searchInput input::placeholder {
+    color: white;
+    font-size: .95rem;
+}
+
+.menuList .searchInput button {
+    background-color: var(--menu-icon-background);
+    align-self: stretch;
+    padding: 0 .5rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    display: grid;
+    place-content: center;
+}
+
+.menuList .searchInput button img {
+    width: 25px;
+    height: 25px;
+}
+
+.menuListDesktop {
+    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+    #menuContainer {
+        padding: 4.5rem 2rem;
+    }
+    #menuContainer .menuList {
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    #menuContainer {
+        padding: 4.5rem 3rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #menuContainer {
+        display: none;
+    }
+    .menuListDesktop {
+        display: flex;
+        align-items: center;
+        column-gap: 1.25rem;
+        font: 1.07rem 'iransans';
+        color: var(--text);
+        margin-right: 1.25rem;
+        width: 100%;
+    }
+    .menuListDesktop li {
+        position: relative;
+        cursor: pointer;
+    }
+    .menuListDesktop li div {
+        display: flex;
+        align-items: center;
+        column-gap: .5rem;
+    }
+    .subMenuDesktop {
+        position: absolute;
+        top: 100%;
+        background-color: var(--background);
+        border: 1.5px solid var(--stroke);
+        border-radius: .5rem;
+        display: none;
+    }
+    .menuListDesktop li:hover .subMenuDesktop {
+        display: block;
+    }
+    .subMenuDesktop li {
+        padding: .75rem .25rem .75rem 7rem;
+        border-bottom: 1.5px solid var(--stroke);
+    }
+    .subMenuDesktop li:hover {
+        background-color: #387ADF;
+        color: white;
+    }
+    .subMenuDesktop li:first-child {
+        border-start-start-radius: inherit;
+        border-start-end-radius: inherit;
+    }
+    .subMenuDesktop li:last-child {
+        border: none;
+        border-end-start-radius: inherit;
+        border-end-end-radius: inherit;
+    }
+    .menuListDesktop li:hover .dynamicArrowDesktop {
+        transform: rotate(180deg);
+    }
+    .searchInputDesktop {
+        display: grid;
+        place-content: center;
+    }
+    .searchInputDesktop img {
+        filter: brightness(0);
+        width: 23px;
+        height: 23px;
+    }
+    html[dark] .searchInputDesktop img {
+        filter: brightness(1);
+    }
+    .cartDesktop {
+        background-color: var(--primary);
+        padding: .30rem;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        margin-right: auto;
+    }
+    .accountDesktop button {
+        border: 1.5px solid var(--stroke);
+        display: flex;
+        align-items: center;
+        column-gap: .25rem;
+        padding: .35rem 1rem;
+        border-radius: 3rem;
+        background-color: var(--background);
+        color: var(--text);
+    }
+    .accountDesktop button img {
+        width: 22px;
+        height: 22px;
+        filter: brightness(0);
+    }
+    html[dark] .accountDesktop button img {
+        filter: brightness(1);
+    }
+    #toggleTheme {
+        color: var(--yellow);
+        font-size: 1.5rem;
+    }
+    html[dark] #toggleTheme {
+        color: white;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .menuListDesktop {
+        column-gap: 2.2rem;
+        margin-right: 2rem;
+    }
+}

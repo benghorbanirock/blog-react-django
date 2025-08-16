@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-thin.ttf');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-extralight.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-semibold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-extrabold.ttf');
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dana';
+    src: url('./../src/assets/fonts/dana/dana-black.ttf');
+    font-weight: 900;
+    font-style: normal;
+}

@@ -1,0 +1,90 @@
+.card {
+    padding: 1rem;
+    border: 1.5px solid var(--stroke);
+    border-radius: 1.25rem;
+    margin-bottom: 1rem;
+    font: 1.1rem 'iransans';
+    color: var(--text);
+}
+
+.card a {
+    color: var(--text);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 1.25rem;
+}
+
+.card h3 {
+    font-weight: 500;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+.score svg {
+    color: var(--yellow)
+}
+
+.score span {
+    padding-top: .35rem;
+    font-family: 'dana';
+}
+
+.duration {
+    opacity: .75;
+    font: 300 .9rem 'dana';
+    padding-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.footerCard {
+    font: 500 1.2rem 'dana';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerCard span {
+    font-weight: 300;
+    font-size: 1rem;
+    opacity: .75;
+}
+
+.footerCard .addButton {
+    background-color: var(--primary);
+    color: var(--background);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+    .cardContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+    .cardContainer li {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 930px) {
+    .cardContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

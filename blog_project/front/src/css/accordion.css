@@ -1,0 +1,34 @@
+.accordionSection {
+    padding: 1.25rem 0;
+}
+
+.accordionSection h4 {
+    font-size: 1.15rem;
+}
+
+.accordionSection .accordion {
+    font-weight: 300;
+}
+
+.accordionSection .accordionTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: .25rem;
+    margin-top: 1.1rem;
+    border-bottom: 1.5px solid var(--stroke);
+    cursor: pointer;
+}
+
+.accordionTitle .arrowAccordion.active {
+    transform: rotate(180deg);
+}
+
+.accordionDescription {
+    display: none;
+    padding-top: .5rem;
+}
+
+.accordionDescription.active {
+    display: block;
+}

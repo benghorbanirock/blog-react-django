@@ -1,0 +1,85 @@
+.downloadContainer {
+    background-color: var(--card-container);
+    padding: 1rem;
+    color: white;
+    font: 500 .95rem 'dana';
+    margin: 1.25rem 0;
+    border-radius: 1.75rem;
+    border: 1.5px solid var(--border-container);
+}
+
+.webAppContainer {
+    background-color: var(--card-background);
+    border-radius: 1.75rem;
+    display: flex;
+    justify-content: center;
+}
+
+.webAppContainer img {
+    width: 85%;
+    margin-top: -3rem;
+}
+
+.downloadDescription {
+    padding-top: 1rem;
+}
+
+.downloadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem 0;
+    width: 100%;
+    border-radius: 3rem;
+    font-size: .8rem;
+}
+
+.downloadButton:nth-of-type(1) {
+    margin: 1rem 0;
+}
+
+.downloadButton:nth-of-type(1) img {
+    margin-left: .2rem;
+}
+
+.downloadButton:nth-of-type(2) img {
+    width: 1.75rem;
+}
+
+.downloadButton span {
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 0 .1rem;
+}
+
+@media only screen and (min-width: 600px) {
+    .downloadContainer {
+        background: url('./../assets/images/worldTwo.png');
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        padding: 3rem;
+    }
+    .webAppContainer {
+        display: none;
+    }
+    .downloadContainer .downloadDescription {
+        max-width: 600px;
+    }
+    .downloadContainer .downloadDescription {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .downloadContainer .buttonContainer {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+    }
+    .downloadContainer .downloadButton {
+        width: 170px;
+        padding: .5rem;
+    }
+}

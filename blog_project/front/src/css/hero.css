@@ -1,0 +1,318 @@
+.hero {
+    color: var(--text);
+    font-family: 'dana';
+}
+
+.poem {
+    padding: .75rem;
+    background-color: var(--orange);
+    border: 1px solid var(--orange-stroke);
+    width: fit-content;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: bold;
+    color: var(--orange-text);
+}
+
+.sunLogo {
+    width: 1rem;
+}
+
+.heroTitle {
+    margin: 1rem .25rem;
+    line-height: 2.75rem;
+}
+
+.heroTitle img {
+    width: 2rem;
+    margin: 0 .25rem;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.heroImageContainer {
+    position: relative;
+}
+
+.heroImageContainer .heroImage {
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+.heroImageContainer .imageInfo {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    background-color: rgba(255, 255, 255, .4);
+    border: 1px solid white;
+    color: white !important;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.imageInfo h3 {
+    font-size: .8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: baseline;
+}
+
+.locationIcon {
+    width: 1rem;
+}
+
+.imageInfo p {
+    font-weight: 600;
+    font-size: 1.75rem;
+}
+
+.places {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.placesImage {
+    border: 1.5px solid var(--stroke);
+    padding: .75rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+}
+
+.placesImage img {
+    width: 1.5rem;
+    height: 1.75rem;
+}
+
+.placesName {
+    padding-top: .5rem;
+    display: inline-block;
+    font-family: 'iransans';
+}
+
+.searchSection {
+    border: 1.5px solid var(--stroke);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    font: 1.1rem 'iransans';
+}
+
+.destination {
+    display: flex;
+    align-items: center;
+}
+
+img.searchIcons {
+    width: 1.75rem;
+    filter: brightness(0);
+}
+
+html[dark] img.searchIcons {
+    filter: brightness(1);
+}
+
+.destination .selectMenu {
+    background-color: var(--background);
+    color: var(--text);
+    border-radius: .5rem;
+}
+
+.destination .selectMenu .options {
+    padding-right: .5rem;
+}
+
+.dateStart {
+    position: relative;
+    display: flex;
+}
+
+.dateStart img.searchIcons {
+    width: 1.5rem;
+}
+
+.dateStart::before {
+    content: attr(select-date);
+    color: var(--text);
+    position: absolute;
+    top: 55%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font: 1.1rem 'iransans';
+}
+
+.dateInput {
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+    width: 100%;
+    cursor: pointer;
+}
+
+.arrowIcons {
+    font-size: 1.25rem;
+    font-weight: 900;
+    position: absolute;
+    top: 55%;
+    left: -1px;
+    transform: translateY(-50%);
+}
+
+.dateEnd {
+    position: relative;
+    padding-right: .05rem;
+    display: flex;
+}
+
+.dateEnd img.searchIcons {
+    width: 1.5rem;
+}
+
+.dateEnd::before {
+    content: attr(select-date);
+    color: var(--text);
+    position: absolute;
+    top: 57%;
+    right: 2rem;
+    transform: translateY(-50%);
+    font: 1.1rem 'iransans';
+}
+
+.personSection {
+    display: flex;
+    align-items: center;
+}
+
+.personSection .selectNumber {
+    padding-top: .25rem;
+    padding-right: .35rem;
+}
+
+.personSection .selectMenu {
+    background-color: var(--background);
+    color: var(--text);
+    border-radius: .5rem;
+}
+
+.personSection .selectMenu .options {
+    padding-right: .5rem;
+}
+
+.searchButton {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    padding: .5rem 0;
+    margin-top: .75rem;
+    border-radius: 4rem;
+}
+
+@media only screen and (min-width: 400px) {
+    .heroImageContainer .imageInfo {
+        left: 1.25rem;
+        top: 1.25rem;
+    }
+}
+
+@media only screen and (min-width: 650px) {
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 115px) auto;
+    }
+    .poem {
+        order: -3;
+        height: fit-content;
+        font-size: .85rem;
+        margin-top: 1.25rem;
+    }
+    .heroTitle {
+        order: -2;
+        font-size: 1.85rem;
+        padding-left: .5rem;
+        margin: 0;
+    }
+    .places {
+        order: -1;
+        padding-left: 2rem;
+    }
+    .heroImageContainer {
+        grid-column: 2 / 3;
+        grid-row: 1 / 4;
+    }
+    .heroImageContainer img {
+        height: 100%;
+        image-rendering: pixelated;
+    }
+    .searchSection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        grid-column: 1 / 3;
+        margin-top: 1rem;
+    }
+    .searchSection :last-child {
+        grid-column: 1 / 3;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    .poem {
+        position: relative;
+    }
+    .heroTitle {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding-left: 3rem;
+    }
+    .heroTitle img {
+        width: 3rem;
+    }
+    .searchSection {
+        margin-top: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .searchSection {
+        border-radius: 4rem;
+        grid-template-columns: repeat(5, 1fr);
+        align-items: center;
+        column-gap: 1.5rem;
+    }
+    .searchSection li {
+        text-wrap: nowrap;
+    }
+    .searchSection :last-child {
+        grid-column: 5 / 6;
+    }
+    .searchSection .searchButton {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .hero {
+        grid-template-rows: repeat(4, 120px);
+        position: relative;
+    }
+    .heroImageContainer {
+        grid-row: 1 / 5;
+    }
+    .searchSection {
+        background-color: var(--background);
+        width: 90%;
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

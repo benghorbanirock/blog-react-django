@@ -1,0 +1,125 @@
+@import './../public/iranSansFont.css';
+@import './../public/danaFont.css';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --base: #000000;
+  --text: #404040;
+  --background: #FFFBFB;
+  --primary: #5264FF;
+  --stroke: rgba(64, 64, 64, .25);
+  --orange: rgba(255, 170, 124, .2);
+  --orange-text: #FF782C;
+  --orange-stroke: rgba(255, 120, 44, .25);
+  --secondary: #EAEAEA;
+  --yellow: #FFDA19;
+  --secondary-button: #D3D3D3;
+  --border-container: #5264FF;
+  --card-container: #5264FF;
+  --card-background: #7D8BFF;
+  --icon-background: rgba(62, 92, 251, .45);
+  --comment-name: #6F1DF4;
+  --menu-icon-background: rgba(62, 93, 251, 0.975);
+  --red: #FF6588;
+  --secondary-pill: #EAEAEA;
+}
+
+:root[dark] {
+  --background: #1E1E1E;
+  --text: #FBFBFB;
+  --base: #FFFFFF;
+  --orange: rgba(255, 170, 124, .05);
+  --stroke: rgba(255, 255, 255, .25);
+  --secondary: #444444;
+  --secondary-button: #444444;
+  --border-container: rgba(251, 251, 251, .25);
+  --card-container: #1D1D1D;
+  --card-background: #4A4A4A;
+  --icon-background: #3D3D3D;
+  --comment-name: #5264FF;
+  --menu-icon-background: #3D3D3D;
+  --secondary-pill: #2E2E2E;
+}
+
+ul {
+  list-style: none;
+}
+
+select,
+input,
+button {
+  border: none;
+  outline: none;
+  font: 1.1rem 'iransans';
+}
+
+button {
+  cursor: pointer;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+option {
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  border: 1px solid var(--stroke);
+  border-radius: .1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="checkbox"]::after {
+  content: '';
+  width: 7px;
+  height: 3px;
+  border: 3px solid white;
+  border-top-width: 0;
+  border-right-width: 0;
+  transform: rotate(-45deg);
+  border-radius: .1rem;
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--primary);
+  border-color: transparent;
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+@media only screen and (min-width: 1100px) {
+  html {
+    ::-webkit-scrollbar {
+      background-color: var(--secondary);
+      width: .85rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--primary);
+      border-radius: 2rem;
+      border: 1px solid var(--secondary);
+    }
+  }
+}

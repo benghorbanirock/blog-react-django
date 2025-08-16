@@ -1,0 +1,98 @@
+.bestSellingContainer {
+    padding: 1.5rem 0;
+    font-family: 'dana';
+    color: var(--text);
+}
+
+.bestSellingHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bestSellingHeader div {
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+}
+
+.bestSellingHeader div h3 {
+    font-size: 1.1rem;
+}
+
+.primaryLine {
+    border-bottom: 2px solid var(--primary);
+}
+
+.bestSellingHeader div img {
+    width: 1.1rem;
+}
+
+.bestSellingHeader button {
+    padding: .5rem .75rem;
+    border-radius: 2rem;
+    font: 500 .9rem 'iransans';
+    background-color: var(--secondary-button);
+    color: var(--text);
+}
+
+.filterSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    order: 2;
+    width: 100%;
+}
+
+.filterSection ul {
+    display: flex;
+    align-items: center;
+    column-gap: 1.25rem;
+    padding: 1rem 0;
+    letter-spacing: -1px;
+    font-size: .9rem;
+}
+
+.filterSection ul li:first-child {
+    border-bottom: 2px solid var(--primary);
+}
+
+.filterSection ul li {
+    cursor: pointer;
+}
+
+.filterSection img {
+    width: 1.35rem;
+    filter: brightness(0);
+    cursor: pointer;
+}
+
+html[dark] .filterSection img {
+    filter: brightness(1);
+}
+
+.loadButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-button);
+    color: var(--text);
+    display: none;
+    place-content: center;
+    margin: .5rem auto;
+}
+
+@media only screen and (min-width: 900px) {
+    .bestSellingHeader button {
+        order: 3;
+    }
+    .bestSellingContainer .filterSection {
+        flex-grow: 1;
+        width: auto;
+        padding: 0 1.5rem;
+    }
+    .loadButton {
+        display: grid;
+    }
+}
